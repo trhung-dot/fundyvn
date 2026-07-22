@@ -183,6 +183,7 @@ TRANSLATIONS = {
         "nav_register":   "Đăng ký",
         "nav_logout":     "Đăng xuất",
         "nav_about":      "Giới thiệu",
+        "nav_guide":      "Hướng dẫn",
         "intro_about":    "Về Fundy",
         "intro_faq":      "Hỏi đáp",
         "intro_terms":    "Điều khoản",
@@ -191,7 +192,7 @@ TRANSLATIONS = {
         "hero_h1a":       "Thu Quỹ",
         "hero_h1b":       "Minh Bạch",
         "hero_h1c":       "không thể gian lận",
-        "hero_sub":       "Dữ liệu tài chính được đóng dấu bất biến trên sổ cái Blockchain — minh bạch tuyệt đối, chống thao túng 100%.",
+        "hero_sub":       "Mọi giao dịch chuyển khoản được đóng dấu bất tử lên blockchain — không ai có thể sửa hay xóa, kể cả bạn.",
         "about_title":    "Fundy là gì?",
         "about_body":     "Nền tảng thu quỹ cho lớp học, hội nhóm, chung cư và hoạt động từ thiện. Mọi giao dịch tự động ghi bất biến lên blockchain — ai cũng tra cứu sao kê thời gian thực.",
         "form_title":     "Tạo quỹ mới",
@@ -239,7 +240,7 @@ TRANSLATIONS = {
         "qr_title":       "📲 Quét để đóng quỹ",
         "qr_sub":         "Dùng app ngân hàng bất kỳ quét mã — tiền vào tài khoản chủ quỹ tự động.",
         "ledger_title":   "Nhật ký giao dịch",
-        "ledger_all":     "{T('ledger_all')}",
+        "ledger_all":     "Xem toàn bộ trên Polygonscan ↗",
         "ledger_empty":   "Chưa có giao dịch nào. Hãy chia sẻ mã QR để bắt đầu!",
         "th_time":        "Thời gian",
         "th_txid":        "Mã GD ngân hàng",
@@ -265,11 +266,11 @@ TRANSLATIONS = {
         "login_sub":      "Truy cập quỹ của bạn và quỹ được chia sẻ.",
         "login_submit":   "Đăng nhập →",
         "login_no_acct":  "Chưa có tài khoản?",
-        "modal_title":    "{T('modal_title')}",
+        "modal_title":    "🔍 Kiểm chứng giao dịch này trên Blockchain",
         "modal_intro_b":  "Blockchain là gì?",
-        "modal_intro":    "{T('modal_intro')}",
-        "step1_title":    "{T('step1_title')}",
-        "step1_desc":     "{T('step1_desc')}",
+        "modal_intro":    "Hãy hình dung đây như một cuốn sổ cái công khai dán ở quảng trường — ai cũng đọc được, không ai xoá được, kể cả Fundy. Mọi giao dịch đều được ghi lại vĩnh viễn ở đó. Bạn có thể tự kiểm tra mà không cần tin tưởng riêng website này.",
+        "step1_title":    "Mở Polygonscan",
+        "step1_desc":     "Polygonscan là trang tra cứu blockchain Polygon độc lập — không thuộc sở hữu của Fundy, không do ai kiểm soát.",
         "step1_link":     "Mở Polygonscan ↗",
         "step2_title":    "Kiểm tra đây đúng là giao dịch của quỹ",
         "step2_desc":     'Trên trang Polygonscan vừa mở, cuộn xuống phần <strong style="color:var(--text)">"Logs"</strong>, bạn sẽ thấy các thông tin sau — so sánh với những gì Fundy hiển thị:',
@@ -277,9 +278,9 @@ TRANSLATIONS = {
         "step2_fundid":   "Fund ID (mã quỹ)",
         "step2_amount":   "Số tiền (amount) — đơn vị VNĐ",
         "step2_desc2":    "Nội dung chuyển khoản",
-        "step3_title":    "{T('step3_title')}",
+        "step3_title":    "Xác nhận không ai có thể chỉnh sửa được",
         "step3_desc":     'Nếu tất cả thông tin khớp → giao dịch này <strong style="color:var(--green)">hoàn toàn xác thực</strong>. Blockchain Polygon là mạng phi tập trung với hàng nghìn máy chủ trên toàn thế giới — để sửa một dòng dữ liệu, kẻ gian cần kiểm soát hơn 51% toàn bộ mạng đó cùng một lúc. Điều này là <strong style="color:var(--green)">bất khả thi</strong> trong thực tế.',
-        "modal_open":     "{T('modal_open')}",
+        "modal_open":     "Mở Polygonscan để kiểm chứng ↗",
         "modal_close":    "Đóng",
         "verify_btn":     "Kiểm chứng",
         "logged_in_as":   "Quỹ sẽ lưu vào tài khoản",
@@ -294,6 +295,7 @@ TRANSLATIONS = {
         "nav_register":   "Sign up",
         "nav_logout":     "Log out",
         "nav_about":      "About",
+        "nav_guide":      "Guide",
         "intro_about":    "About Fundy",
         "intro_faq":      "FAQ",
         "intro_terms":    "Terms",
@@ -715,6 +717,178 @@ INTRO_CONTENT = {
 }
 
 # =========================================================================
+# HƯỚNG DẪN SỬ DỤNG — nội dung chi tiết theo từng bước
+# =========================================================================
+GUIDE_CONTENT = {
+    "vi": {
+        "h1": "Hướng dẫn sử dụng Fundy",
+        "sub": "Từng bước tạo quỹ, quyên góp và tự kiểm chứng minh bạch — không cần tin ai, chỉ cần đối chiếu dữ liệu.",
+        "toc": [
+            ("tao-quy",    "1. Tạo quỹ"),
+            ("quyen-gop",  "2. Quyên góp / chuyển tiền"),
+            ("theo-doi",   "3. Theo dõi &amp; đối chiếu"),
+            ("xac-minh",   "4. Xác minh trên Blockchain"),
+            ("chi-tieu",   "5. Ghi nhận chi tiêu (chủ quỹ)"),
+            ("moi-thanh-vien", "6. Mời thành viên xem quỹ"),
+            ("an-toan",    "7. Nhận diện dấu hiệu gian lận"),
+        ],
+        "sections": [
+            {
+                "id": "tao-quy", "title": "1. Tạo quỹ mới",
+                "intro": "Bất kỳ ai cũng có thể khởi tạo một quỹ trong vài giây, không bắt buộc phải đăng ký tài khoản.",
+                "steps": [
+                    ("Vào trang chủ", "Bấm mục \"Trang chủ\" trên thanh điều hướng, kéo tới khối \"Tạo quỹ mới\"."),
+                    ("Điền thông tin quỹ", "Nhập Tên quỹ, Ngân hàng nhận tiền và Số tài khoản (STK) — đây là số tài khoản mà người quyên góp sẽ chuyển khoản tới."),
+                    ("Chọn chế độ hiển thị", "Tích \"Công khai\" nếu muốn quỹ xuất hiện ở mục Quỹ cộng đồng để mọi người cùng thấy và giám sát; để trống nếu muốn quỹ ở chế độ riêng tư, chỉ ai có link mới xem được."),
+                    ("Tạo tài khoản (tuỳ chọn)", "Nếu chưa đăng nhập, bạn có thể điền thêm Tên đăng nhập/Mật khẩu ngay trong form để vừa tạo quỹ vừa tạo tài khoản chủ quỹ — giúp quản lý quỹ về sau."),
+                    ("Nhận đường dẫn quỹ", "Sau khi tạo, hệ thống trả về một trang quỹ riêng với đường dẫn duy nhất — lưu lại hoặc chia sẻ link này cho người quyên góp."),
+                ],
+            },
+            {
+                "id": "quyen-gop", "title": "2. Quyên góp / chuyển tiền vào quỹ",
+                "intro": "Fundy không giữ tiền hộ — bạn chuyển khoản trực tiếp qua ngân hàng, hệ thống chỉ ghi nhận và đối chiếu minh bạch.",
+                "steps": [
+                    ("Mở trang quỹ", "Truy cập đường dẫn quỹ mà chủ quỹ chia sẻ, hoặc tìm quỹ công khai trong mục \"Quỹ cộng đồng\"."),
+                    ("Lấy thông tin chuyển khoản", "Xem đúng Tên ngân hàng và Số tài khoản hiển thị trên trang quỹ."),
+                    ("Ghi đúng nội dung chuyển khoản", "Khi chuyển khoản qua app ngân hàng, nên giữ nội dung rõ ràng (ví dụ tên người ủng hộ) để dễ đối chiếu sau này."),
+                    ("Chờ hệ thống ghi nhận", "Sau khi ngân hàng báo có, giao dịch sẽ được đồng bộ tự động lên sổ cái Polygon trong ít phút — số dư và lịch sử quỹ sẽ tự cập nhật."),
+                ],
+            },
+            {
+                "id": "theo-doi", "title": "3. Theo dõi &amp; đối chiếu giao dịch",
+                "intro": "Mọi khoản thu, chi của quỹ đều hiển thị công khai theo thời gian thực trên trang quỹ.",
+                "steps": [
+                    ("Xem nhật ký giao dịch", "Trang quỹ liệt kê đầy đủ từng giao dịch: số tiền, thời gian, nội dung, và đánh dấu là khoản thu hay khoản chi."),
+                    ("Đối chiếu với sao kê ngân hàng", "So sánh số tiền và mã giao dịch ngân hàng (bankTxId) với sao kê tài khoản của chính bạn nếu bạn là người chuyển khoản."),
+                    ("Theo dõi số dư quỹ", "Số dư hiện tại = tổng thu − tổng chi, được tính tự động và hiển thị ngay đầu trang quỹ."),
+                ],
+            },
+            {
+                "id": "xac-minh", "title": "4. Xác minh trên Blockchain (Polygonscan)",
+                "intro": "Đây là bước quan trọng nhất để tự mình chống lừa đảo — không cần tin Fundy, chỉ cần tin vào dữ liệu công khai trên chuỗi khối.",
+                "steps": [
+                    ("Bấm nút \"Kiểm chứng\"", "Ở mỗi dòng giao dịch trong nhật ký quỹ, bấm biểu tượng/nút kiểm chứng để mở hộp thoại hướng dẫn xác minh."),
+                    ("Mở Polygonscan (Amoy Explorer)", "Bấm liên kết trong hộp thoại để mở trực tiếp trang Explorer công khai — không cần đăng nhập, không cần cài đặt gì thêm."),
+                    ("Đối chiếu địa chỉ hợp đồng &amp; mã quỹ", "Kiểm tra Địa chỉ hợp đồng thông minh và Fund ID hiển thị trong hộp thoại có trùng khớp với dữ liệu trên Explorer hay không."),
+                    ("So khớp số tiền &amp; nội dung", "Đối chiếu số tiền và mô tả giao dịch trên Explorer với những gì hiển thị trên trang quỹ — nếu khớp 100%, giao dịch đó là thật và không thể bị chỉnh sửa."),
+                ],
+            },
+            {
+                "id": "chi-tieu", "title": "5. Ghi nhận chi tiêu (dành cho chủ quỹ)",
+                "intro": "Chỉ chủ quỹ mới có quyền ghi chi tiêu, và mọi khoản chi đều vĩnh viễn hiển thị công khai để thành viên giám sát.",
+                "steps": [
+                    ("Đăng nhập bằng tài khoản chủ quỹ", "Chỉ tài khoản đã tạo quỹ (owner) mới thấy được form ghi chi tiêu trên trang quỹ."),
+                    ("Nhập số tiền &amp; mô tả", "Điền chính xác số tiền đã chi và mô tả rõ ràng (mua gì, cho ai, mục đích gì)."),
+                    ("Xác nhận ghi sổ", "Sau khi lưu, khoản chi được đồng bộ lên blockchain và không thể sửa hay xoá — kể cả bởi chủ quỹ hay đội ngũ Fundy."),
+                ],
+            },
+            {
+                "id": "moi-thanh-vien", "title": "6. Mời thành viên xem quỹ riêng tư",
+                "intro": "Với quỹ riêng tư, chủ quỹ có thể mời thêm người xem để cùng giám sát mà không công khai toàn bộ cộng đồng.",
+                "steps": [
+                    ("Vào trang quỹ", "Đăng nhập với vai trò chủ quỹ và mở trang quỹ cần mời thêm người xem."),
+                    ("Nhập tên đăng nhập người được mời", "Điền đúng tên đăng nhập Fundy của người bạn muốn mời vào ô mời thành viên."),
+                    ("Xác nhận", "Sau khi mời thành công, người đó sẽ thấy quỹ này trong mục \"Quỹ của tôi\" và có thể theo dõi mọi giao dịch."),
+                ],
+            },
+            {
+                "id": "an-toan", "title": "7. Nhận diện dấu hiệu gian lận / lừa đảo",
+                "intro": "Fundy giúp minh bạch hoá dữ liệu, nhưng bạn vẫn nên tự kiểm tra vài dấu hiệu sau trước khi quyên góp.",
+                "steps": [
+                    ("Số tài khoản không khớp", "Luôn đối chiếu Ngân hàng và Số tài khoản trên trang quỹ Fundy với số tài khoản người kêu gọi công bố ở nơi khác (Facebook, Zalo...) — nếu lệch, dừng lại và hỏi trực tiếp."),
+                    ("Không thể tra cứu trên Explorer", "Nếu một giao dịch được quảng cáo là \"đã ghi lên blockchain\" nhưng không thể tìm thấy trên Polygonscan với đúng địa chỉ hợp đồng của Fundy, đó là dấu hiệu đáng ngờ."),
+                    ("Chi tiêu không có mô tả rõ ràng", "Một quỹ minh bạch sẽ luôn có mô tả chi tiêu cụ thể; các khoản chi mập mờ, chung chung, lặp lại bất thường nên được đặt câu hỏi với chủ quỹ."),
+                    ("Áp lực chuyển tiền gấp", "Cẩn trọng với những lời kêu gọi tạo cảm giác cấp bách, hối thúc chuyển tiền ngay mà không cho thời gian kiểm tra thông tin quỹ."),
+                ],
+            },
+        ],
+    },
+    "en": {
+        "h1": "How to use Fundy",
+        "sub": "A step-by-step guide to creating a fund, donating, and verifying transparency yourself — trust the data, not a middleman.",
+        "toc": [
+            ("tao-quy",    "1. Create a fund"),
+            ("quyen-gop",  "2. Donate / transfer money"),
+            ("theo-doi",   "3. Track &amp; reconcile"),
+            ("xac-minh",   "4. Verify on the blockchain"),
+            ("chi-tieu",   "5. Record expenses (owner)"),
+            ("moi-thanh-vien", "6. Invite viewers"),
+            ("an-toan",    "7. Spot red flags"),
+        ],
+        "sections": [
+            {
+                "id": "tao-quy", "title": "1. Create a new fund",
+                "intro": "Anyone can set up a fund in seconds — an account is not required.",
+                "steps": [
+                    ("Go to the homepage", "Click \"Home\" in the nav bar and scroll to the \"Create a new fund\" block."),
+                    ("Fill in the fund details", "Enter the Fund name, receiving Bank, and Account number — this is the account donors will transfer money to."),
+                    ("Choose visibility", "Check \"Public\" so the fund appears under Community Funds for everyone to see and monitor; leave it unchecked to keep the fund private, viewable only via its link."),
+                    ("Create an account (optional)", "If you're not logged in, you can add a Username/Password right in the same form to create both the fund and your owner account at once — this makes managing the fund easier later."),
+                    ("Get your fund link", "Once created, you'll land on a dedicated fund page with a unique URL — save it or share it with donors."),
+                ],
+            },
+            {
+                "id": "quyen-gop", "title": "2. Donate / transfer money into a fund",
+                "intro": "Fundy never holds your money — you transfer directly through your bank, and the system records and reconciles it transparently.",
+                "steps": [
+                    ("Open the fund page", "Visit the link the fund owner shared, or find a public fund under \"Community Funds\"."),
+                    ("Get the transfer details", "Check the exact Bank name and Account number shown on the fund page."),
+                    ("Use a clear transfer note", "When transferring through your banking app, keep the description clear (e.g. your name) so it's easy to reconcile later."),
+                    ("Wait for it to sync", "Once your bank confirms the transfer, it's synced onto the Polygon ledger within minutes — the fund's balance and history update automatically."),
+                ],
+            },
+            {
+                "id": "theo-doi", "title": "3. Track &amp; reconcile transactions",
+                "intro": "Every inflow and outflow of a fund is shown publicly, in real time, on the fund page.",
+                "steps": [
+                    ("View the transaction log", "The fund page lists every transaction: amount, time, description, and whether it's income or an expense."),
+                    ("Cross-check with your bank statement", "Compare the amount and bank transaction ID (bankTxId) against your own bank statement if you're the one who transferred."),
+                    ("Watch the fund balance", "The current balance = total income − total expenses, calculated automatically and shown at the top of the fund page."),
+                ],
+            },
+            {
+                "id": "xac-minh", "title": "4. Verify on the blockchain (Polygonscan)",
+                "intro": "This is the most important step for protecting yourself against fraud — you don't need to trust Fundy, only the public, on-chain data.",
+                "steps": [
+                    ("Click \"Verify\"", "On any transaction row in the fund's log, click the verify icon/button to open the verification guide dialog."),
+                    ("Open Polygonscan (Amoy Explorer)", "Click the link in the dialog to open the public Explorer directly — no login or extra installs needed."),
+                    ("Cross-check the contract address &amp; fund ID", "Confirm the Smart contract address and Fund ID shown in the dialog match what's on the Explorer."),
+                    ("Match the amount &amp; description", "Compare the amount and transaction description on the Explorer with what's shown on the fund page — if they match exactly, the transaction is real and cannot have been altered."),
+                ],
+            },
+            {
+                "id": "chi-tieu", "title": "5. Record expenses (fund owners)",
+                "intro": "Only the fund owner can log an expense, and every expense stays permanently visible so members can keep watch.",
+                "steps": [
+                    ("Log in as the fund owner", "Only the account that created the fund (the owner) sees the expense form on the fund page."),
+                    ("Enter the amount &amp; description", "Fill in the exact amount spent and a clear description — what it was for, who it was for, and the purpose."),
+                    ("Confirm the entry", "Once saved, the expense is written to the blockchain and can never be edited or deleted — not even by the owner or the Fundy team."),
+                ],
+            },
+            {
+                "id": "moi-thanh-vien", "title": "6. Invite viewers to a private fund",
+                "intro": "For private funds, the owner can invite additional viewers to help monitor it without exposing it to the whole community.",
+                "steps": [
+                    ("Open the fund page", "Log in as the owner and open the fund you want to add a viewer to."),
+                    ("Enter their username", "Type the exact Fundy username of the person you want to invite in the invite-member field."),
+                    ("Confirm", "Once invited, that person will see this fund under \"My Funds\" and can follow every transaction."),
+                ],
+            },
+            {
+                "id": "an-toan", "title": "7. Spot signs of fraud or scams",
+                "intro": "Fundy makes the data transparent, but you should still check a few things yourself before donating.",
+                "steps": [
+                    ("Mismatched account details", "Always compare the Bank and Account number on the Fundy page against what the organizer posted elsewhere (Facebook, messaging apps, etc.) — if they don't match, stop and ask directly."),
+                    ("Can't be found on the Explorer", "If a transaction is advertised as \"recorded on the blockchain\" but can't be found on Polygonscan under Fundy's actual contract address, treat that as a red flag."),
+                    ("Vague or missing expense descriptions", "A transparent fund always logs specific expense descriptions; vague, generic, or unusually repetitive entries deserve a direct question to the owner."),
+                    ("Pressure to send money urgently", "Be wary of appeals that create urgency and push you to transfer immediately without giving you time to check the fund's information."),
+                ],
+            },
+        ],
+    },
+}
+
+# =========================================================================
 # CSS — Redesign hoàn toàn
 # =========================================================================
 CSS = r"""
@@ -804,11 +978,13 @@ a:hover{color:var(--text)}
   color:var(--text3);text-transform:uppercase;
   vertical-align:super;margin-left:2px;
 }
-.nav-links{display:flex;gap:4px}
+.nav-links{display:flex;align-items:center;gap:4px}
 .nav-link{
+  display:inline-flex;align-items:center;
+  height:34px;line-height:1;
   font-size:13px;font-weight:500;color:var(--text2);
-  padding:6px 12px;border-radius:8px;transition:all .15s;
-  white-space:nowrap;
+  padding:0 12px;border-radius:8px;transition:all .15s;
+  white-space:nowrap;box-sizing:border-box;
 }
 .nav-link:hover{color:var(--text);background:rgba(255,255,255,.06);text-decoration:none}
 .nav-link.active{color:var(--green);background:var(--gdim)}
@@ -842,11 +1018,12 @@ a:hover{color:var(--text)}
 .nav-btn.primary:hover{background:var(--green2);color:#000}
 
 /* ── NAV DROPDOWN (Giới thiệu) ──────────────────────────────────── */
-.nav-dropdown{position:relative}
+.nav-dropdown{position:relative;display:flex;align-items:center}
 .dropdown-toggle{
   display:inline-flex;align-items:center;gap:5px;
+  height:34px;line-height:1;box-sizing:border-box;
   font-size:13px;font-weight:500;color:var(--text2);
-  padding:6px 12px;border-radius:8px;transition:all .15s;
+  padding:0 12px;border-radius:8px;transition:all .15s;
   white-space:nowrap;background:none;border:none;cursor:pointer;font-family:inherit;
 }
 .dropdown-toggle:hover{color:var(--text);background:rgba(255,255,255,.06)}
@@ -1343,6 +1520,28 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
 .auth-logo span{color:var(--green)}
 .auth-sub{font-size:13px;color:var(--text3)}
 
+/* ── GUIDE PAGE ──────────────────────────────────────────────── */
+.guide-section{margin-bottom:8px;scroll-margin-top:88px}
+.guide-section:not(:last-child){border-bottom:1px solid var(--border);padding-bottom:26px;margin-bottom:26px}
+.guide-section-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.guide-section-num{
+  flex-shrink:0;width:28px;height:28px;border-radius:8px;
+  background:var(--gdim);border:1px solid var(--gborder);color:var(--green);
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.guide-section h2{font-size:16px;font-weight:700;color:var(--text)}
+.guide-section-intro{font-size:13px;color:var(--text2);line-height:1.75;margin:6px 0 16px}
+.guide-toc{
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;
+  padding:14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);
+}
+.guide-toc a{
+  font-size:12px;font-weight:600;color:var(--text2);
+  background:var(--surface);border:1px solid var(--border2);border-radius:20px;
+  padding:5px 12px;transition:all .15s;
+}
+.guide-toc a:hover{color:var(--green);border-color:var(--gborder);background:var(--gdim);text-decoration:none}
+
 @media(max-width:520px){
   .stats,.feat,.fg-row{grid-template-columns:1fr}
   .hero{padding:36px 0 28px}
@@ -1379,7 +1578,10 @@ def nav_html(active=''):
       </div>
     </div>"""
 
-    links = lnk('/', T('nav_home'), 'home') + intro_dd + lnk('/quy-cong-dong', T('nav_community'), 'community')
+    links = (lnk('/', T('nav_home'), 'home')
+             + intro_dd
+             + lnk('/huong-dan', T('nav_guide'), 'guide')
+             + lnk('/quy-cong-dong', T('nav_community'), 'community'))
     user = current_user()
     if user:
         links += lnk('/quy-cua-toi', T('nav_mine'), 'mine')
@@ -1549,6 +1751,44 @@ def terms_page():
 def privacy_page():
     return intro_page('privacy')
 
+def guide_page():
+    """Render trang Hướng dẫn sử dụng chi tiết, dễ tiếp cận từ nav bar."""
+    lang = get_lang() if get_lang() in ('vi', 'en') else 'vi'
+    data = GUIDE_CONTENT[lang]
+
+    toc = ''.join(f'<a href="#{anchor}">{label}</a>' for anchor, label in data['toc'])
+
+    sections = ''
+    for i, sec in enumerate(data['sections'], start=1):
+        steps_html = ''.join(
+            f"""<div class="step">
+              <div class="step-num">{j}</div>
+              <div class="step-body">
+                <div class="step-title">{title}</div>
+                <div class="step-desc">{desc}</div>
+              </div>
+            </div>""" for j, (title, desc) in enumerate(sec['steps'], start=1)
+        )
+        sections += f"""<div class="guide-section" id="{sec['id']}">
+          <div class="guide-section-head">
+            <div class="guide-section-num">{i}</div>
+            <h2>{sec['title'].split('. ', 1)[-1]}</h2>
+          </div>
+          <div class="guide-section-intro">{sec['intro']}</div>
+          <div class="steps">{steps_html}</div>
+        </div>"""
+
+    content = f"""
+    <h1 style="font-size:24px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px">{data['h1']}</h1>
+    <div style="font-size:13px;color:var(--text3);margin-bottom:20px">{data['sub']}</div>
+    <div class="guide-toc">{toc}</div>
+    <div class="card">{sections}</div>"""
+    return page(content, active='guide')
+
+@app.route('/huong-dan')
+def guide_route():
+    return guide_page()
+
 # =========================================================================
 # ROUTES
 # =========================================================================
@@ -1708,7 +1948,7 @@ def register_page():
         flash(f'Chào mừng, {username}!', 'success')
         return redirect(url_for('index'))
 
-    c = """
+    c = f"""
 <div class="auth-hero">
   <div class="auth-logo">Fund<span>y</span></div>
   <div class="auth-sub">Tạo tài khoản miễn phí — không cần email</div>
@@ -1744,7 +1984,7 @@ def login_page():
         flash(f'Xin chào, {user["username"]}!', 'success')
         return redirect(url_for('index'))
 
-    c = """
+    c = f"""
 <div class="auth-hero">
   <div class="auth-logo">Fund<span>y</span></div>
   <div class="auth-sub">{T('login_sub')}</div>
@@ -2406,5 +2646,4 @@ if __name__ == '__main__':
     print(f"🔗 Ví: {account_address}")
     print(f"📡 Polygon: {w3.is_connected()}")
     print(f"💾 DB: {DB_PATH}")
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(port=5000, debug=True)
